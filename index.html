@@ -1,317 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rachana Singh | Web Developer Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f8f9fa;
-      padding-top: 40px;
-    }
-    .portfolio-card img {
-      height: 200px;
-      object-fit: cover;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rachana Kumari Singh | Laravel Developer & Digital Marketer</title>
+<meta name="description" content="Senior PHP/Laravel developer and digital marketer in New Delhi with 15+ years of experience. Open to remote roles.">
+<meta property="og:title" content="Rachana Kumari Singh | Laravel Developer & Digital Marketer">
+<meta property="og:description" content="15+ years building websites and growing them with SEO, ads and content. Open to remote roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C2541; --paper:#F4F6FA; --card:#FFFFFF; --marigold:#E9A23B; --teal:#1F7A72;
+  --line:#D6DCE6; --muted:#5B6478; --accent: var(--teal);
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --ink:#E8ECF5; --paper:#121826; --card:#1A2234; --line:#2C3650; --muted:#A3ADC2; --teal:#4FB3A9; }
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important; animation:none!important} }
+body{margin:0; background:var(--paper); color:var(--ink); font:400 1.0625rem/1.65 var(--body); -webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible, button:focus-visible{outline:3px solid var(--marigold); outline-offset:3px; border-radius:6px}
+.wrap{max-width:68rem; margin:0 auto; padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display); line-height:1.1; margin:0}
+h2{font-size:clamp(1.6rem,3vw,2.2rem); font-weight:700; margin-bottom:1.5rem}
+h3{font-size:1.2rem; font-weight:700}
+p{margin:0 0 1rem}
+.top{display:flex; justify-content:space-between; align-items:center; padding:1.25rem 0; font-size:.95rem}
+.top nav{display:flex; gap:1.25rem; flex-wrap:wrap}
+.top nav a{text-decoration:none; color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.mark{font-family:var(--display); font-weight:800; font-size:1.15rem; text-decoration:none}
+.hero{padding:3.5rem 0 3rem; border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5.4rem); font-weight:800; letter-spacing:-.02em; max-width:14ch}
+.hero .lead{font-size:1.2rem; color:var(--muted); max-width:46ch; margin:1.25rem 0 2.25rem}
+.switch-label{font-weight:600; margin-bottom:.75rem}
+.switch{display:inline-grid; grid-template-columns:1fr 1fr; background:var(--card); border:2px solid var(--ink); border-radius:999px; padding:5px; position:relative; max-width:100%}
+.switch::before{content:""; position:absolute; top:5px; bottom:5px; left:5px; width:calc(50% - 5px); border-radius:999px; background:var(--accent); transition:transform .35s cubic-bezier(.6,.1,.2,1), background .35s}
+body[data-track="marketing"] .switch::before{transform:translateX(100%)}
+.switch button{position:relative; z-index:1; border:0; background:none; font:600 clamp(.95rem,2.4vw,1.15rem)/1.2 var(--display); color:var(--ink); padding:.85rem 1.5rem; border-radius:999px; cursor:pointer; white-space:nowrap; transition:color .35s}
+.switch button[aria-pressed="true"]{color:#fff}
+body[data-track="marketing"]{--accent:var(--marigold)}
+body[data-track="marketing"] .switch button[aria-pressed="true"]{color:#1C2541}
+.pitch{margin-top:2rem; max-width:52ch; font-size:1.15rem}
+.actions{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.5rem}
+.btn{display:inline-block; padding:.8rem 1.4rem; border-radius:10px; font-weight:600; text-decoration:none; border:2px solid var(--ink)}
+.btn.solid{background:var(--ink); color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.proof{margin-top:2.5rem; color:var(--muted); font-size:1rem; max-width:60ch}
+.proof strong{color:var(--ink)}
+section{padding:4rem 0; border-bottom:1px solid var(--line)}
+[data-show]{display:none}
+body[data-track="developer"] [data-show="developer"], body[data-track="marketing"] [data-show="marketing"]{display:block}
+.skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:2rem 2.5rem}
+.skills h3{font-size:1.05rem; margin-bottom:.6rem; padding-bottom:.5rem; border-bottom:3px solid var(--accent); display:inline-block}
+.skills ul{list-style:none; margin:0; padding:0}
+.skills li{padding:.2rem 0}
+.work{display:grid; gap:1.25rem}
+.item{background:var(--card); border:1px solid var(--line); border-left:6px solid var(--accent); border-radius:4px 14px 14px 4px; padding:1.5rem 1.75rem}
+.item.feature{padding:2rem 2rem}
+.item.feature h3{font-size:1.6rem}
+.item p{color:var(--muted); margin:.6rem 0 .9rem; max-width:65ch}
+.tags{display:flex; flex-wrap:wrap; gap:.4rem; margin:0; padding:0; list-style:none}
+.tags li{font-size:.85rem; padding:.2rem .65rem; border-radius:999px; background:var(--paper); border:1px solid var(--line)}
+.two{display:grid; grid-template-columns:repeat(auto-fit,minmax(18rem,1fr)); gap:1.25rem}
+.role{display:grid; grid-template-columns:minmax(9rem,14rem) 1fr; gap:1rem 2.5rem}
+.role .when{font-family:var(--display); font-weight:700; font-size:1.1rem}
+.role ul{margin:.75rem 0 0; padding-left:1.1rem}
+.role li{margin-bottom:.35rem}
+.edu{margin-top:2.5rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:1rem 2rem}
+.edu p{margin:0; color:var(--muted)}
+.edu strong{display:block; color:var(--ink)}
+.contact{padding:5rem 0}
+.contact h2{font-size:clamp(2rem,5vw,3.4rem); font-weight:800; max-width:16ch}
+.contact .lines{margin-top:2rem; display:grid; gap:.6rem; font-size:1.15rem}
+.contact .lines a{text-decoration-color:var(--accent); text-decoration-thickness:2px; text-underline-offset:4px}
+footer{padding:2rem 0 3rem; color:var(--muted); font-size:.9rem}
+@media (max-width:640px){
+  .wrap{padding:0 1.15rem}
+  .top nav{display:none}
+  .hero{padding-top:2rem}
+  .switch{display:grid; width:100%}
+  .switch button{padding:.8rem .5rem; white-space:normal}
+  .role{grid-template-columns:1fr}
+  .item,.item.feature{padding:1.25rem}
+}
+</style>
 </head>
-<body>
-<!-- Header Carousel with Banner -->
-<header class="mb-5">
-  <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+<body data-track="developer">
+<div class="wrap">
 
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <img src="https://picsum.photos/1200/400?random=11" class="d-block w-100" alt="Inspirational Banner 1">
-        <div class="carousel-caption d-none d-md-block">
-          <h1 class="fw-bold text-shadow">Code with Passion. Build with Purpose.</h1>
-          <p>Every line of code is a step toward transformation.</p>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <img src="https://picsum.photos/1200/400?random=12" class="d-block w-100" alt="Inspirational Banner 2">
-        <div class="carousel-caption d-none d-md-block">
-          <h1 class="fw-bold text-shadow">Empowering Through Technology</h1>
-          <p>Creating digital experiences that educate, engage, and evolve.</p>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <img src="https://picsum.photos/1200/400?random=13" class="d-block w-100" alt="Inspirational Banner 3">
-        <div class="carousel-caption d-none d-md-block">
-          <h1 class="fw-bold text-shadow">Crafting Code, Shaping Futures</h1>
-          <p>Turning ideas into meaningful digital solutions.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+<header class="top">
+  <a class="mark" href="#top">Rachana Singh</a>
+  <nav aria-label="Sections">
+    <a href="#skills">Skills</a><a href="#work">Work</a><a href="#ai">AI</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- Optional Styling -->
-<style>
-  .text-shadow {
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+<main id="top">
+<div class="hero">
+  <h1>Rachana Kumari Singh</h1>
+  <p class="lead">I build web applications in PHP and Laravel, add AI to them, and grow them with SEO, ads and content. 15+ years in New Delhi, open to remote roles.</p>
+
+  <p class="switch-label" id="switch-label">What are you hiring for?</p>
+  <div class="switch" role="group" aria-labelledby="switch-label">
+    <button type="button" data-track="developer" aria-pressed="true">PHP / Laravel developer</button>
+    <button type="button" data-track="marketing" aria-pressed="false">Digital marketer</button>
+  </div>
+
+  <div data-show="developer">
+    <p class="pitch">Senior full-stack developer. I take projects from client requirements and database design through development, deployment and long-term maintenance, and I mentor junior developers.</p>
+    <div class="actions">
+      <a class="btn solid" href="resume-developer.pdf" download>Download developer resume</a>
+      <a class="btn" href="mailto:rachanasingh.dev@gmail.com?subject=Laravel%20developer%20role">Email me</a>
+    </div>
+  </div>
+  <div data-show="marketing">
+    <p class="pitch">Digital marketer who can also build. I plan SEO and ad campaigns, create the content and design, and ship the landing pages myself.</p>
+    <div class="actions">
+      <a class="btn solid" href="resume-marketing.pdf" download>Download marketing resume</a>
+      <a class="btn" href="mailto:rachanasingh.dev@gmail.com?subject=Digital%20marketing%20role">Email me</a>
+    </div>
+  </div>
+
+  <p class="proof"><strong>15+ years</strong> at Nice Web Technologies, <strong>50+ websites</strong> delivered, <strong>20+ brand identities</strong> created, and a local business ranked <strong>#3 on Google</strong> for its main search term.</p>
+</div>
+
+<section id="skills">
+  <div data-show="developer">
+    <h2>What I work with</h2>
+    <div class="skills">
+      <div><h3>Backend</h3><ul><li>PHP (OOP)</li><li>Laravel (MVC)</li><li>REST APIs</li><li>MySQL and database design</li></ul></div>
+      <div><h3>Frontend</h3><ul><li>HTML5 and CSS3</li><li>JavaScript</li><li>React.js</li><li>Responsive, mobile-first layouts</li></ul></div>
+      <div><h3>CMS and e-commerce</h3><ul><li>WordPress themes and plugins</li><li>E-commerce websites</li><li>Technical SEO</li></ul></div>
+      <div><h3>AI integration</h3><ul><li>LLM APIs (DeepSeek, Gemini)</li><li>Local LLMs (Ollama)</li><li>Structured JSON output</li><li>Multi-provider fallback</li><li>Text-to-speech</li></ul></div>
+      <div><h3>Workflow</h3><ul><li>Git and GitHub</li><li>Production debugging</li><li>Deployment and maintenance</li><li>Code review and mentoring</li></ul></div>
+    </div>
+  </div>
+  <div data-show="marketing">
+    <h2>What I work with</h2>
+    <div class="skills">
+      <div><h3>Search</h3><ul><li>On-page and local SEO</li><li>Google Business Profile</li><li>Keyword and competitor research</li><li>Google Search Console</li></ul></div>
+      <div><h3>Ads and analytics</h3><ul><li>Google Ads</li><li>Meta Ads (Facebook and Instagram)</li><li>Google Analytics 4</li></ul></div>
+      <div><h3>Content and social</h3><ul><li>Social media marketing</li><li>Content strategy</li><li>Video editing</li><li>Brochures and campaign creatives</li></ul></div>
+      <div><h3>Design and web</h3><ul><li>Photoshop, Illustrator, CorelDRAW</li><li>Brand identity</li><li>WordPress and landing pages</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div data-show="developer">
+    <h2>Selected work</h2>
+    <div class="work">
+      <article class="item feature">
+        <h3>Student learning portal</h3>
+        <p>A Laravel application that manages courses, lessons and student access for an active computer training institute. I maintain it in production, including tracing and fixing errors in the course and lesson modules.</p>
+        <ul class="tags"><li>Laravel</li><li>PHP</li><li>MySQL</li></ul>
+      </article>
+      <div class="two">
+        <article class="item">
+          <h3>50+ client websites</h3>
+          <p>Websites and web applications for businesses in retail, healthcare, education and hospitality, from first brief to launch and ongoing support.</p>
+          <ul class="tags"><li>PHP</li><li>Laravel</li><li>WordPress</li><li>React</li></ul>
+        </article>
+        <article class="item">
+          <h3>E-commerce optimisation</h3>
+          <p>Managed and improved online stores for speed, usability and conversion to support client sales.</p>
+          <ul class="tags"><li>E-commerce</li><li>UX</li><li>Performance</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div data-show="marketing">
+    <h2>Results and campaigns</h2>
+    <div class="work">
+      <article class="item feature">
+        <h3>#3 on Google for “computer institute in Delhi”</h3>
+        <p>Local SEO and Google Business Profile optimisation for a North Delhi training institute, taking its listing into the top three for the most valuable search in its category.</p>
+        <ul class="tags"><li>Local SEO</li><li>Google Business Profile</li></ul>
+      </article>
+      <div class="two">
+        <article class="item">
+          <h3>Neighbourhood search strategy</h3>
+          <p>Keyword and competitor-gap analysis across three websites, leading to a plan of location landing pages to reach students in Rohini, Pitampura, Adarsh Nagar and nearby areas.</p>
+          <ul class="tags"><li>Keyword research</li><li>Search Console</li></ul>
+        </article>
+        <article class="item">
+          <h3>Video and social content</h3>
+          <p>A beginner tutorial series in Hinglish, an animated app walkthrough for a Google Play listing, and social posts and brochures for admissions.</p>
+          <ul class="tags"><li>Video</li><li>Social media</li><li>Content</li></ul>
+        </article>
+        <article class="item">
+          <h3>Paid campaigns</h3>
+          <p>Planning, running and optimising Google Ads and Meta Ads campaigns, with results tracked in GA4.</p>
+          <ul class="tags"><li>Google Ads</li><li>Meta Ads</li><li>GA4</li></ul>
+        </article>
+        <article class="item">
+          <h3>Automated SEO and video content</h3>
+          <p>An AI pipeline that writes and publishes SEO blog posts automatically and produces narrated lesson videos, with a human approval step.</p>
+          <ul class="tags"><li>AI content</li><li>SEO automation</li><li>TTS</li></ul>
+        </article>
+        <article class="item">
+          <h3>20+ brand identities</h3>
+          <p>Logos, collateral and visual guidelines for clients across industries.</p>
+          <ul class="tags"><li>Branding</li><li>Illustrator</li><li>CorelDRAW</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ai">
+  <h2>AI systems I've built</h2>
+  <div class="work">
+    <article class="item feature">
+      <h3>AI-powered Laravel LMS</h3>
+      <p>A multi-provider AI system (DeepSeek, Gemini, Ollama) inside a Laravel LMS. It generates courses, lessons, quizzes and exams, runs SEO blogging on its own, powers a voice AI language tutor with Google TTS, and produces narrated lesson videos. Built with Laravel queue jobs, JSON-schema outputs, retries and provider fallbacks, and a human approval step before anything is published.</p>
+      <ul class="tags"><li>Laravel</li><li>DeepSeek</li><li>Gemini</li><li>Ollama</li><li>Google TTS</li><li>Queues</li></ul>
+    </article>
+    <p style="color:var(--muted);max-width:70ch;margin-top:.5rem">LLM APIs, prompt engineering, structured JSON output, multi-provider fallback, local LLMs (Ollama), text-to-speech, AI content pipelines, SEO automation, Laravel queues, Python automation, AI coding agents (Claude Code, OpenAI Codex)</p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="role">
+    <div class="when">March 2011 to present</div>
+    <div>
+      <h3>Senior Web Developer, Designer and Trainer</h3>
+      <p style="color:var(--muted);margin:.25rem 0 0">Nice Web Technologies (NWT Institute), New Delhi</p>
+      <ul>
+        <li>Lead web projects end to end for clients and for the company's own platforms.</li>
+        <li>Run SEO, ads and content for the institute's websites and social channels.</li>
+        <li>Review code and mentor junior developers and designers.</li>
+        <li>Teach web development and digital skills to institute students.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="edu">
+    <p><strong>Bachelor's Degree in Computer Science</strong>Swami Vivekanand Subharti University</p>
+    <p><strong>Diploma in Computer Applications</strong>NIELIT, with 'O' Level and 'A' Level certifications</p>
+    <p><strong>Computer Teacher Training (CTT)</strong>2-year diploma</p>
+    <p><strong>Languages</strong>English (fluent), Hindi (native)</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Let's talk about your team.</h2>
+  <div class="lines">
+    <a href="mailto:rachanasingh.dev@gmail.com">rachanasingh.dev@gmail.com</a>
+    <a href="tel:+918368066493">+91 83680 66493</a>
+    <a href="https://github.com/rachanasinghdelhi">github.com/rachanasinghdelhi</a>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr">2026</span> Rachana Kumari Singh. New Delhi, India.</footer>
+</div>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.switch button');
+  function setTrack(t, push){
+    if(t !== 'developer' && t !== 'marketing') t = 'developer';
+    document.body.dataset.track = t;
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.track === t ? 'true' : 'false'); });
+    if(push){ try{ history.replaceState(null, '', '#' + t); }catch(e){} }
   }
-</style>
-
-<div class="container">
-  <div class="text-center mb-5">
-    <h1 class="fw-bold">Rachana Singh</h1>
-    <h4 class="text-muted">Full Stack Web Developer</h4>
-    <p>Email: evesdrop08@gmail.com | Phone: +91 8368066493</p>
-  </div>
-
-  <h2 class="mb-4">Web Projects</h2>
-  <div class="row g-4">
-
-    <!-- Nice Web Technologies -->
-    <div class="col-md-6">
-      <div class="card portfolio-card shadow-sm">
-        <img src="images/nice_web.png" class="card-img-top" alt="Nice Web Technologies">
-        <div class="card-body">
-          <h5 class="card-title">Nice Web Technologies Website</h5>
-          <p class="card-text">Laravel-based site with admin panel and course management.</p>
-          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#niceModal">Read More</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Computer Institute -->
-    <div class="col-md-6">
-      <div class="card portfolio-card shadow-sm">
-        <img src="images/nice_computer.png" class="card-img-top" alt="Computer Institute">
-        <div class="card-body">
-          <h5 class="card-title">Computer Institute – Jahangirpuri</h5>
-          <p class="card-text">Laravel education site with Razorpay and lead forms.</p>
-          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#instituteModal">Read More</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pasmanda -->
-    <div class="col-md-6">
-      <div class="card portfolio-card shadow-sm">
-        <img src="images/pasmanda.png" class="card-img-top" alt="Pasmanda">
-        <div class="card-body">
-          <h5 class="card-title">Pasmanda Vikas Foundation</h5>
-          <p class="card-text">Membership website with admin approval and dashboard.</p>
-          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#pasmandaModal">Read More</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- ESICMOA -->
-    <div class="col-md-6">
-      <div class="card portfolio-card shadow-sm">
-        <img src="images/esic.png" class="card-img-top" alt="ESICMOA">
-        <div class="card-body">
-          <h5 class="card-title">ESICMOA – Doctors Membership Portal</h5>
-          <p class="card-text">Secure membership portal with backend and payments.</p>
-          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#esicModal">Read More</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Full-Width Mobile App Section -->
-  <section class="mt-5 py-5 bg-white border-top border-2">
-    <div class="container">
-      <h2 class="mb-4 text-center">Mobile App Projects</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <div class="card portfolio-card shadow-sm">
-            <img src="https://picsum.photos/1200/400?random=15" class="card-img-top" alt="Student App">
-            <div class="card-body">
-              <h5 class="card-title">React Native Student App</h5>
-              <p class="card-text">Cross-platform student app integrated with Laravel APIs.</p>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#studentAppModal">Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <h2 class="mt-5 mb-3">Skills</h2>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">PHP, Laravel 8–11</li>
-    <li class="list-group-item">MySQL, Eloquent, REST APIs</li>
-    <li class="list-group-item">HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, Blade</li>
-    <li class="list-group-item">React Native (mobile frontend)</li>
-    <li class="list-group-item">GitHub, cPanel, Livewire, SEO, Digital Marketing</li>
-  </ul>
-</div>
-
-<!-- Modals -->
-<!-- Nice Web Modal -->
-<div class="modal fade" id="niceModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">Nice Web Technologies</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>This is the official site for our computer institute. Built with Laravel and MySQL, it features:</p>
-        <ul>
-          <li>Admin dashboard with role management</li>
-          <li>Student registration and inquiry management system</li>
-          <li>Course listing with category and keyword filters</li>
-          <li>SEO-optimized structure with Yoast SEO plugin integration</li>
-          <li>Blog section for content marketing and announcements</li>
-          <li>Contact form with email notifications using WPForms</li>
-        </ul>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Computer Institute Modal -->
-<div class="modal fade" id="instituteModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">Computer Institute - Jahangirpuri</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Laravel-based education platform with the following features:</p>
-        <ul>
-          <li>Course inquiry and demo booking forms</li>
-          <li>Razorpay payment integration for course enrollment</li>
-          <li>Dynamic course management via admin panel</li>
-          <li>Student dashboard with batch, profile & assignment access</li>
-          <li>Teacher dashboard with exam and quiz creation module</li>
-          <li>Admin panel for managing users, fees, leads, and courses</li>
-          <li>Live notifications system for student batch updates</li>
-          <li>Secure login for students, teachers, and admins</li>
-          <li>Mobile app connectivity via Laravel API (React Native)</li>
-          <li>SEO-optimized frontend for local visibility and ranking</li>
-        </ul>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Pasmanda Modal -->
-<div class="modal fade" id="pasmandaModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">Pasmanda Vikas Foundation</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Membership-based Laravel portal designed for social outreach:</p>
-        <ul>
-          <li>Member registration with form validation and auto-generated IDs</li>
-          <li>Admin approval system with status updates (pending, approved, rejected)</li>
-          <li>Backend user management with search, filter, and export functionality</li>
-          <li>Role-based access control for super admins, state heads, and users</li>
-          <li>Real-time form submission using jQuery and AJAX (no page reload)</li>
-          <li>Interactive dashboard showing total members, approvals, and charts</li>
-          <li>Dynamic member list table with pagination, sorting, and search</li>
-          <li>Image/document upload with preview using jQuery + PHP validation</li>
-          <li>Admin can edit/delete members and assign batch/region dynamically</li>
-          <li>Custom alerts, modals, and success/error feedback using jQuery + Bootstrap</li>
-        </ul>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ESICMOA Modal -->
-<div class="modal fade" id="esicModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">ESICMOA - Doctors Membership Portal</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Built for a national-level doctors' union:</p>
-        <ul>
-          <li>Member registration with OTP/email verification</li>
-          <li>Admin approval system with notification alerts</li>
-          <li>Membership tracking and status updates</li>
-          <li>AJAX-powered backend for smooth operations without reloads</li>
-          <li>Role-based access for admins, state-level officers, and users</li>
-          <li>Dynamic data filtering and member search using jQuery</li>
-          <li>Backend dashboard to view statistics and membership analytics</li>
-          <li>Editable member profiles with image/document uploads</li>
-          <li>PDF ID card generation system for verified members</li>
-          <li>Mobile-responsive and SEO-friendly frontend</li>
-        </ul>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Student App Modal -->
-<div class="modal fade" id="studentAppModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header"><h5 class="modal-title">React Native Student App</h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <p>Hybrid mobile app created using React Native + Laravel API:</p>
-        <ul>
-          <li>Batch change requests with admin response & approval system</li>
-          <li>Assignment uploads with file validation and deadlines</li>
-          <li>Timer-based exam module with result submission</li>
-          <li>Profile view with batch, course, and admission details</li>
-          <li>Student notification panel for real-time updates</li>
-          <li>Laravel-powered REST API integration for all features</li>
-          <li>JWT token-based secure login and session handling</li>
-          <li>Mobile-optimized layout with intuitive navigation</li>
-          <li>Connected to student dashboard & admin for live data sync</li>
-          <li>Future-ready structure for push notifications and live chat</li>
-        </ul>
-        
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Footer -->
-<footer class="mt-5 bg-dark text-white pt-4 pb-3">
-  <div class="container">
-    <div class="row text-center text-md-start">
-      <div class="col-12">
-        <h5 class="fw-bold">Rachana Singh</h5>
-        <p class="mb-1">Full Stack Web Developer</p>
-        <p class="mb-1">Email: <a href="mailto:evesdrop08@gmail.com" class="text-white text-decoration-none">evesdrop08@gmail.com</a></p>
-        <p class="mb-1">Phone: <a href="tel:+918368066493" class="text-white text-decoration-none">+91 8368066493</a></p>
-      </div>
-    </div>
-
-    <hr class="border-secondary my-3">
-
-    <div class="text-center small">
-      © <script>document.write(new Date().getFullYear())</script> Rachana Singh. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  buttons.forEach(function(b){ b.addEventListener('click', function(){ setTrack(b.dataset.track, true); }); });
+  var h = location.hash.replace('#','');
+  setTrack(h === 'marketing' ? 'marketing' : 'developer', false);
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
