@@ -3,282 +3,368 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rachana Kumari Singh | Laravel Developer & Digital Marketer</title>
-<meta name="description" content="Senior PHP/Laravel developer and digital marketer in New Delhi with 15+ years of experience. Open to remote roles.">
-<meta property="og:title" content="Rachana Kumari Singh | Laravel Developer & Digital Marketer">
-<meta property="og:description" content="15+ years building websites and growing them with SEO, ads and content. Open to remote roles.">
+<title>Rachana Singh | Laravel & AI Developer</title>
+<meta name="description" content="Laravel developer building AI-powered web apps: multi-provider LLM pipelines, voice tutors and automated content.">
+<meta property="og:title" content="Rachana Singh | Laravel & AI Developer">
+<meta property="og:description" content="I build Laravel apps and plug AI into them. Try the live demos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1C2541; --paper:#F4F6FA; --card:#FFFFFF; --marigold:#E9A23B; --teal:#1F7A72;
-  --line:#D6DCE6; --muted:#5B6478; --accent: var(--teal);
-  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --body:"Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --bg:#14112B; --bg2:#1E1A3D; --text:#F3F0FF; --muted:#A9A3C9;
+  --pink:#FF6B8B; --sky:#6BD3FF; --sun:#FFD166; --mint:#7CF2C2; --line:#342E63;
+  --display:"Unbounded","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){ --ink:#E8ECF5; --paper:#121826; --card:#1A2234; --line:#2C3650; --muted:#A3ADC2; --teal:#4FB3A9; }
-}
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px)}
-@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important; animation:none!important} }
-body{margin:0; background:var(--paper); color:var(--ink); font:400 1.0625rem/1.65 var(--body); -webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--text); font:400 1.05rem/1.6 var(--body); overflow-x:hidden}
 a{color:inherit}
-a:focus-visible, button:focus-visible{outline:3px solid var(--marigold); outline-offset:3px; border-radius:6px}
-.wrap{max-width:68rem; margin:0 auto; padding:0 1.5rem}
-h1,h2,h3{font-family:var(--display); line-height:1.1; margin:0}
-h2{font-size:clamp(1.6rem,3vw,2.2rem); font-weight:700; margin-bottom:1.5rem}
-h3{font-size:1.2rem; font-weight:700}
-p{margin:0 0 1rem}
-.top{display:flex; justify-content:space-between; align-items:center; padding:1.25rem 0; font-size:.95rem}
-.top nav{display:flex; gap:1.25rem; flex-wrap:wrap}
-.top nav a{text-decoration:none; color:var(--muted)}
-.top nav a:hover{color:var(--ink)}
-.mark{font-family:var(--display); font-weight:800; font-size:1.15rem; text-decoration:none}
-.hero{padding:3.5rem 0 3rem; border-bottom:1px solid var(--line)}
-.hero h1{font-size:clamp(2.6rem,7.5vw,5.4rem); font-weight:800; letter-spacing:-.02em; max-width:14ch}
-.hero .lead{font-size:1.2rem; color:var(--muted); max-width:46ch; margin:1.25rem 0 2.25rem}
-.switch-label{font-weight:600; margin-bottom:.75rem}
-.switch{display:inline-grid; grid-template-columns:1fr 1fr; background:var(--card); border:2px solid var(--ink); border-radius:999px; padding:5px; position:relative; max-width:100%}
-.switch::before{content:""; position:absolute; top:5px; bottom:5px; left:5px; width:calc(50% - 5px); border-radius:999px; background:var(--accent); transition:transform .35s cubic-bezier(.6,.1,.2,1), background .35s}
-body[data-track="marketing"] .switch::before{transform:translateX(100%)}
-.switch button{position:relative; z-index:1; border:0; background:none; font:600 clamp(.95rem,2.4vw,1.15rem)/1.2 var(--display); color:var(--ink); padding:.85rem 1.5rem; border-radius:999px; cursor:pointer; white-space:nowrap; transition:color .35s}
-.switch button[aria-pressed="true"]{color:#fff}
-body[data-track="marketing"]{--accent:var(--marigold)}
-body[data-track="marketing"] .switch button[aria-pressed="true"]{color:#1C2541}
-.pitch{margin-top:2rem; max-width:52ch; font-size:1.15rem}
-.actions{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.5rem}
-.btn{display:inline-block; padding:.8rem 1.4rem; border-radius:10px; font-weight:600; text-decoration:none; border:2px solid var(--ink)}
-.btn.solid{background:var(--ink); color:var(--paper)}
-.btn:hover{transform:translateY(-1px)}
-.proof{margin-top:2.5rem; color:var(--muted); font-size:1rem; max-width:60ch}
-.proof strong{color:var(--ink)}
-section{padding:4rem 0; border-bottom:1px solid var(--line)}
-[data-show]{display:none}
-body[data-track="developer"] [data-show="developer"], body[data-track="marketing"] [data-show="marketing"]{display:block}
-.skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:2rem 2.5rem}
-.skills h3{font-size:1.05rem; margin-bottom:.6rem; padding-bottom:.5rem; border-bottom:3px solid var(--accent); display:inline-block}
-.skills ul{list-style:none; margin:0; padding:0}
-.skills li{padding:.2rem 0}
-.work{display:grid; gap:1.25rem}
-.item{background:var(--card); border:1px solid var(--line); border-left:6px solid var(--accent); border-radius:4px 14px 14px 4px; padding:1.5rem 1.75rem}
-.item.feature{padding:2rem 2rem}
-.item.feature h3{font-size:1.6rem}
-.item p{color:var(--muted); margin:.6rem 0 .9rem; max-width:65ch}
-.tags{display:flex; flex-wrap:wrap; gap:.4rem; margin:0; padding:0; list-style:none}
-.tags li{font-size:.85rem; padding:.2rem .65rem; border-radius:999px; background:var(--paper); border:1px solid var(--line)}
-.two{display:grid; grid-template-columns:repeat(auto-fit,minmax(18rem,1fr)); gap:1.25rem}
-.role{display:grid; grid-template-columns:minmax(9rem,14rem) 1fr; gap:1rem 2.5rem}
-.role .when{font-family:var(--display); font-weight:700; font-size:1.1rem}
-.role ul{margin:.75rem 0 0; padding-left:1.1rem}
-.role li{margin-bottom:.35rem}
-.edu{margin-top:2.5rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:1rem 2rem}
-.edu p{margin:0; color:var(--muted)}
-.edu strong{display:block; color:var(--ink)}
-.contact{padding:5rem 0}
-.contact h2{font-size:clamp(2rem,5vw,3.4rem); font-weight:800; max-width:16ch}
-.contact .lines{margin-top:2rem; display:grid; gap:.6rem; font-size:1.15rem}
-.contact .lines a{text-decoration-color:var(--accent); text-decoration-thickness:2px; text-underline-offset:4px}
-footer{padding:2rem 0 3rem; color:var(--muted); font-size:.9rem}
-@media (max-width:640px){
-  .wrap{padding:0 1.15rem}
-  .top nav{display:none}
-  .hero{padding-top:2rem}
-  .switch{display:grid; width:100%}
-  .switch button{padding:.8rem .5rem; white-space:normal}
-  .role{grid-template-columns:1fr}
-  .item,.item.feature{padding:1.25rem}
+button{font:inherit; cursor:pointer}
+:focus-visible{outline:3px solid var(--sun); outline-offset:3px; border-radius:8px}
+.wrap{max-width:70rem; margin:0 auto; padding:0 1.25rem}
+h1,h2,h3{font-family:var(--display); margin:0; line-height:1.1}
+h2{font-size:clamp(1.6rem,4.5vw,2.6rem); font-weight:900; margin-bottom:.6rem}
+.sub{color:var(--muted); max-width:52ch; margin:0 0 2rem}
+section{padding:4.5rem 0}
+
+/* floating blobs */
+.blobs{position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden}
+.blobs span{position:absolute; border-radius:50%; filter:blur(70px); opacity:.35; animation:float 18s ease-in-out infinite alternate}
+.blobs span:nth-child(1){width:22rem;height:22rem;background:var(--pink);top:-6rem;left:-6rem}
+.blobs span:nth-child(2){width:18rem;height:18rem;background:var(--sky);top:40%;right:-6rem;animation-duration:22s}
+.blobs span:nth-child(3){width:16rem;height:16rem;background:var(--sun);bottom:-6rem;left:30%;animation-duration:26s;opacity:.2}
+@keyframes float{to{transform:translate(4rem,3rem) scale(1.15)}}
+main,header,footer{position:relative; z-index:1}
+
+/* nav */
+.top{display:flex; justify-content:space-between; align-items:center; padding-top:1.1rem; padding-bottom:1.1rem}
+.logo{font-family:var(--display); font-weight:900; text-decoration:none; font-size:1.1rem}
+.logo b{color:var(--pink)}
+.top a.switch{font-size:.9rem; text-decoration:none; padding:.45rem .9rem; border:2px solid var(--line); border-radius:999px; color:var(--muted)}
+.top a.switch:hover{border-color:var(--sun); color:var(--text)}
+
+/* hero */
+.hero{padding-top:3rem; padding-bottom:4rem; display:grid; gap:2.5rem; grid-template-columns:1.1fr 1fr; align-items:center}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem); font-weight:900; letter-spacing:-.02em}
+.hero h1 .wave{display:inline-block; animation:wave 2.4s ease-in-out infinite; transform-origin:70% 70%}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(14deg)}20%,40%{transform:rotate(-8deg)}}
+.hero p{font-size:1.2rem; color:var(--muted); max-width:34ch; margin:1.25rem 0 1.75rem}
+.hero p strong{color:var(--text)}
+.cta{display:flex; flex-wrap:wrap; gap:.75rem}
+.btn{display:inline-flex; align-items:center; gap:.5rem; padding:.85rem 1.4rem; border-radius:14px; font-weight:700; text-decoration:none; border:0; transition:transform .15s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg)}
+.btn.pink{background:var(--pink); color:#14112B; box-shadow:0 6px 0 #B8405C}
+.btn.ghost{background:transparent; color:var(--text); border:2px solid var(--line)}
+
+.term{background:#0D0B1E; border:2px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:0 30px 60px -20px rgba(255,107,139,.35); transform:rotate(1.5deg)}
+.term .bar{display:flex; gap:.4rem; padding:.7rem .9rem; background:var(--bg2)}
+.term .bar i{width:.75rem;height:.75rem;border-radius:50%;display:block}
+.term .bar i:nth-child(1){background:var(--pink)} .term .bar i:nth-child(2){background:var(--sun)} .term .bar i:nth-child(3){background:var(--mint)}
+.term pre{margin:0; padding:1.1rem 1.2rem 1.4rem; font:400 .92rem/1.7 var(--mono); min-height:15.5rem; white-space:pre-wrap; color:var(--muted)}
+.term .p{color:var(--mint)} .term .o{color:var(--text)} .term .k{color:var(--sky)}
+.caret{display:inline-block; width:.55rem; height:1.05rem; background:var(--sun); vertical-align:-2px; animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* pipeline demo */
+.demo{background:var(--bg2); border:2px solid var(--line); border-radius:24px; padding:clamp(1.25rem,3vw,2.25rem)}
+.demo-head{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; align-items:center; margin-bottom:1.5rem}
+.demo-head h3{font-size:1.25rem}
+.demo-head small{display:block; color:var(--muted); font-family:var(--body); font-weight:400; font-size:.9rem; margin-top:.3rem}
+.pick{display:flex; flex-wrap:wrap; gap:.5rem}
+.pick button{background:transparent; color:var(--text); border:2px solid var(--line); border-radius:999px; padding:.45rem .9rem; font-size:.9rem}
+.pick button[aria-pressed="true"]{background:var(--sky); border-color:var(--sky); color:#14112B; font-weight:700}
+.steps{list-style:none; margin:0; padding:0; display:grid; gap:.6rem}
+.steps li{display:grid; grid-template-columns:2.4rem 1fr auto; align-items:center; gap:.8rem; padding:.75rem .9rem; border-radius:14px; background:#17143A; border:2px solid transparent; opacity:.45; transition:all .35s}
+.steps li .ic{width:2.4rem;height:2.4rem;border-radius:10px;display:grid;place-items:center;background:var(--line);font-size:1.1rem}
+.steps li .st{font:600 .8rem var(--mono); color:var(--muted)}
+.steps li.run{opacity:1; border-color:var(--sun)} .steps li.run .st{color:var(--sun)}
+.steps li.ok{opacity:1; border-color:var(--mint)} .steps li.ok .st{color:var(--mint)}
+.steps li.fail{opacity:1; border-color:var(--pink)} .steps li.fail .st{color:var(--pink)}
+.steps li.ok .ic{background:var(--mint)} .steps li.fail .ic{background:var(--pink)} .steps li.run .ic{background:var(--sun); animation:pulse .8s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.12)}}
+.steps .d{font-size:.85rem; color:var(--muted); display:block}
+.demo-foot{display:flex; flex-wrap:wrap; gap:1rem; align-items:center; margin-top:1.5rem}
+#approve{display:none}
+.out{font:600 .9rem var(--mono); color:var(--mint)}
+
+/* project tiles */
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(17rem,1fr)); gap:1.25rem}
+.tile{position:relative; background:var(--bg2); border:2px solid var(--line); border-radius:24px; padding:1.6rem; overflow:hidden; transition:transform .25s, border-color .25s}
+.tile:hover{transform:translateY(-4px) rotate(-.6deg); border-color:var(--sky)}
+.tile h3{font-size:1.15rem; margin:.9rem 0 .5rem}
+.tile p{color:var(--muted); margin:0 0 1rem; font-size:.98rem}
+.emoji{font-size:2.2rem; display:inline-block}
+.tile:hover .emoji{animation:bounce .6s}
+@keyframes bounce{40%{transform:translateY(-10px) rotate(-10deg)}}
+.chips{display:flex; flex-wrap:wrap; gap:.4rem; list-style:none; margin:0; padding:0}
+.chips li{font:600 .75rem var(--mono); padding:.25rem .6rem; border-radius:999px; background:#17143A; color:var(--sky)}
+
+/* voice tutor */
+.bars{display:flex; gap:4px; align-items:center; height:3rem; margin:1rem 0}
+.bars i{width:6px; height:20%; border-radius:6px; background:var(--pink); transition:height .15s}
+.tile.talking .bars i{animation:eq .5s ease-in-out infinite alternate}
+.bars i:nth-child(2n){animation-delay:.1s!important} .bars i:nth-child(3n){animation-delay:.25s!important} .bars i:nth-child(5n){animation-delay:.18s!important}
+@keyframes eq{from{height:15%}to{height:100%}}
+.mini{background:var(--pink); color:#14112B; border:0; border-radius:12px; padding:.6rem 1rem; font-weight:700}
+
+/* browser stack */
+.browsers{display:flex; margin:1rem 0 .5rem; height:5.5rem}
+.browsers div{flex:0 0 5.2rem; height:4.6rem; margin-right:-1.6rem; border-radius:10px; background:#17143A; border:2px solid var(--line); padding:.35rem; font:600 .62rem var(--mono); color:var(--muted); transition:transform .3s; display:flex; flex-direction:column; justify-content:space-between}
+.browsers div::before{content:"• • •"; color:var(--line); letter-spacing:1px}
+.tile:hover .browsers div:nth-child(1){transform:translateY(-6px) rotate(-6deg)}
+.tile:hover .browsers div:nth-child(2){transform:translateY(-10px) rotate(-2deg)}
+.tile:hover .browsers div:nth-child(3){transform:translateY(-6px) rotate(3deg)}
+.tile:hover .browsers div:nth-child(4){transform:translateY(-10px) rotate(7deg)}
+
+/* stack playground */
+.play{display:flex; flex-wrap:wrap; gap:.7rem; justify-content:center; padding:1rem 0}
+.play button{border:0; border-radius:999px; padding:.7rem 1.2rem; font:700 1rem var(--display); color:#14112B; transition:transform .2s}
+.play button:nth-child(4n+1){background:var(--pink)} .play button:nth-child(4n+2){background:var(--sky)}
+.play button:nth-child(4n+3){background:var(--sun)} .play button:nth-child(4n+4){background:var(--mint)}
+.play button:hover{transform:scale(1.08) rotate(-3deg)}
+.play button.pop{animation:popr .5s}
+@keyframes popr{30%{transform:scale(1.25) rotate(8deg)}60%{transform:scale(.95) rotate(-4deg)}}
+.fact{text-align:center; min-height:3.2rem; color:var(--muted); max-width:46ch; margin:.5rem auto 0}
+
+/* contact */
+.contact{text-align:center; padding:5rem 0 3rem}
+.contact h2{font-size:clamp(2rem,7vw,4rem)}
+.contact .cta{justify-content:center; margin-top:1.75rem}
+footer{text-align:center; color:var(--muted); font-size:.85rem; padding:1.5rem 0 2.5rem}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr; padding-top:1.5rem}
+  .term{transform:none}
+  .steps li{grid-template-columns:2.2rem 1fr}
+  .steps li .st{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important; transition:none!important}
+  html{scroll-behavior:auto}
 }
 </style>
 </head>
-<body data-track="developer">
-<div class="wrap">
+<body>
+<div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<header class="top">
-  <a class="mark" href="#top">Rachana Singh</a>
-  <nav aria-label="Sections">
-    <a href="#skills">Skills</a><a href="#work">Work</a><a href="#ai">AI</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-  </nav>
+<header class="wrap top">
+  <a class="logo" href="#top">rachana<b>.</b>dev</a>
+  <a class="switch" href="marketing.html">Marketing work</a>
 </header>
 
 <main id="top">
-<div class="hero">
-  <h1>Rachana Kumari Singh</h1>
-  <p class="lead">I build web applications in PHP and Laravel, add AI to them, and grow them with SEO, ads and content. 15+ years in New Delhi, open to remote roles.</p>
-
-  <p class="switch-label" id="switch-label">What are you hiring for?</p>
-  <div class="switch" role="group" aria-labelledby="switch-label">
-    <button type="button" data-track="developer" aria-pressed="true">PHP / Laravel developer</button>
-    <button type="button" data-track="marketing" aria-pressed="false">Digital marketer</button>
-  </div>
-
-  <div data-show="developer">
-    <p class="pitch">Senior full-stack developer. I take projects from client requirements and database design through development, deployment and long-term maintenance, and I mentor junior developers.</p>
-    <div class="actions">
-      <a class="btn solid" href="resume-developer.pdf" download>Download developer resume</a>
-      <a class="btn" href="mailto:rachanasingh.dev@gmail.com?subject=Laravel%20developer%20role">Email me</a>
-    </div>
-  </div>
-  <div data-show="marketing">
-    <p class="pitch">Digital marketer who can also build. I plan SEO and ad campaigns, create the content and design, and ship the landing pages myself.</p>
-    <div class="actions">
-      <a class="btn solid" href="resume-marketing.pdf" download>Download marketing resume</a>
-      <a class="btn" href="mailto:rachanasingh.dev@gmail.com?subject=Digital%20marketing%20role">Email me</a>
-    </div>
-  </div>
-
-  <p class="proof"><strong>15+ years</strong> at Nice Web Technologies, <strong>50+ websites</strong> delivered, <strong>20+ brand identities</strong> created, and a local business ranked <strong>#3 on Google</strong> for its main search term.</p>
-</div>
-
-<section id="skills">
-  <div data-show="developer">
-    <h2>What I work with</h2>
-    <div class="skills">
-      <div><h3>Backend</h3><ul><li>PHP (OOP)</li><li>Laravel (MVC)</li><li>REST APIs</li><li>MySQL and database design</li></ul></div>
-      <div><h3>Frontend</h3><ul><li>HTML5 and CSS3</li><li>JavaScript</li><li>React.js</li><li>Responsive, mobile-first layouts</li></ul></div>
-      <div><h3>CMS and e-commerce</h3><ul><li>WordPress themes and plugins</li><li>E-commerce websites</li><li>Technical SEO</li></ul></div>
-      <div><h3>AI integration</h3><ul><li>LLM APIs (DeepSeek, Gemini)</li><li>Local LLMs (Ollama)</li><li>Structured JSON output</li><li>Multi-provider fallback</li><li>Text-to-speech</li></ul></div>
-      <div><h3>Workflow</h3><ul><li>Git and GitHub</li><li>Production debugging</li><li>Deployment and maintenance</li><li>Code review and mentoring</li></ul></div>
-    </div>
-  </div>
-  <div data-show="marketing">
-    <h2>What I work with</h2>
-    <div class="skills">
-      <div><h3>Search</h3><ul><li>On-page and local SEO</li><li>Google Business Profile</li><li>Keyword and competitor research</li><li>Google Search Console</li></ul></div>
-      <div><h3>Ads and analytics</h3><ul><li>Google Ads</li><li>Meta Ads (Facebook and Instagram)</li><li>Google Analytics 4</li></ul></div>
-      <div><h3>Content and social</h3><ul><li>Social media marketing</li><li>Content strategy</li><li>Video editing</li><li>Brochures and campaign creatives</li></ul></div>
-      <div><h3>Design and web</h3><ul><li>Photoshop, Illustrator, CorelDRAW</li><li>Brand identity</li><li>WordPress and landing pages</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section id="work">
-  <div data-show="developer">
-    <h2>Selected work</h2>
-    <div class="work">
-      <article class="item feature">
-        <h3>Student learning portal</h3>
-        <p>A Laravel application that manages courses, lessons and student access for an active computer training institute. I maintain it in production, including tracing and fixing errors in the course and lesson modules.</p>
-        <ul class="tags"><li>Laravel</li><li>PHP</li><li>MySQL</li></ul>
-      </article>
-      <div class="two">
-        <article class="item">
-          <h3>50+ client websites</h3>
-          <p>Websites and web applications for businesses in retail, healthcare, education and hospitality, from first brief to launch and ongoing support.</p>
-          <ul class="tags"><li>PHP</li><li>Laravel</li><li>WordPress</li><li>React</li></ul>
-        </article>
-        <article class="item">
-          <h3>E-commerce optimisation</h3>
-          <p>Managed and improved online stores for speed, usability and conversion to support client sales.</p>
-          <ul class="tags"><li>E-commerce</li><li>UX</li><li>Performance</li></ul>
-        </article>
-      </div>
-    </div>
-  </div>
-
-  <div data-show="marketing">
-    <h2>Results and campaigns</h2>
-    <div class="work">
-      <article class="item feature">
-        <h3>#3 on Google for “computer institute in Delhi”</h3>
-        <p>Local SEO and Google Business Profile optimisation for a North Delhi training institute, taking its listing into the top three for the most valuable search in its category.</p>
-        <ul class="tags"><li>Local SEO</li><li>Google Business Profile</li></ul>
-      </article>
-      <div class="two">
-        <article class="item">
-          <h3>Neighbourhood search strategy</h3>
-          <p>Keyword and competitor-gap analysis across three websites, leading to a plan of location landing pages to reach students in Rohini, Pitampura, Adarsh Nagar and nearby areas.</p>
-          <ul class="tags"><li>Keyword research</li><li>Search Console</li></ul>
-        </article>
-        <article class="item">
-          <h3>Video and social content</h3>
-          <p>A beginner tutorial series in Hinglish, an animated app walkthrough for a Google Play listing, and social posts and brochures for admissions.</p>
-          <ul class="tags"><li>Video</li><li>Social media</li><li>Content</li></ul>
-        </article>
-        <article class="item">
-          <h3>Paid campaigns</h3>
-          <p>Planning, running and optimising Google Ads and Meta Ads campaigns, with results tracked in GA4.</p>
-          <ul class="tags"><li>Google Ads</li><li>Meta Ads</li><li>GA4</li></ul>
-        </article>
-        <article class="item">
-          <h3>Automated SEO and video content</h3>
-          <p>An AI pipeline that writes and publishes SEO blog posts automatically and produces narrated lesson videos, with a human approval step.</p>
-          <ul class="tags"><li>AI content</li><li>SEO automation</li><li>TTS</li></ul>
-        </article>
-        <article class="item">
-          <h3>20+ brand identities</h3>
-          <p>Logos, collateral and visual guidelines for clients across industries.</p>
-          <ul class="tags"><li>Branding</li><li>Illustrator</li><li>CorelDRAW</li></ul>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="ai">
-  <h2>AI systems I've built</h2>
-  <div class="work">
-    <article class="item feature">
-      <h3>AI-powered Laravel LMS</h3>
-      <p>A multi-provider AI system (DeepSeek, Gemini, Ollama) inside a Laravel LMS. It generates courses, lessons, quizzes and exams, runs SEO blogging on its own, powers a voice AI language tutor with Google TTS, and produces narrated lesson videos. Built with Laravel queue jobs, JSON-schema outputs, retries and provider fallbacks, and a human approval step before anything is published.</p>
-      <ul class="tags"><li>Laravel</li><li>DeepSeek</li><li>Gemini</li><li>Ollama</li><li>Google TTS</li><li>Queues</li></ul>
-    </article>
-    <p style="color:var(--muted);max-width:70ch;margin-top:.5rem">LLM APIs, prompt engineering, structured JSON output, multi-provider fallback, local LLMs (Ollama), text-to-speech, AI content pipelines, SEO automation, Laravel queues, Python automation, AI coding agents (Claude Code, OpenAI Codex)</p>
-  </div>
-</section>
-
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="role">
-    <div class="when">March 2011 to present</div>
+  <div class="wrap hero">
     <div>
-      <h3>Senior Web Developer, Designer and Trainer</h3>
-      <p style="color:var(--muted);margin:.25rem 0 0">Nice Web Technologies (NWT Institute), New Delhi</p>
-      <ul>
-        <li>Lead web projects end to end for clients and for the company's own platforms.</li>
-        <li>Run SEO, ads and content for the institute's websites and social channels.</li>
-        <li>Review code and mentor junior developers and designers.</li>
-        <li>Teach web development and digital skills to institute students.</li>
-      </ul>
+      <h1>Hi, I'm Rachana <span class="wave" aria-hidden="true">👋</span></h1>
+      <p>I build <strong>Laravel apps</strong> and plug <strong>AI</strong> into them. Generated courses, talking tutors, self-writing blogs. Have a play below.</p>
+      <div class="cta">
+        <a class="btn pink" href="#demo">Try the AI demo</a>
+        <a class="btn ghost" href="mailto:rachanasingh.dev@gmail.com?subject=Developer%20role">Hire me</a>
+      </div>
+    </div>
+    <div class="term" aria-label="Terminal introduction">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <pre id="term"></pre>
     </div>
   </div>
-  <div class="edu">
-    <p><strong>Bachelor's Degree in Computer Science</strong>Swami Vivekanand Subharti University</p>
-    <p><strong>Diploma in Computer Applications</strong>NIELIT, with 'O' Level and 'A' Level certifications</p>
-    <p><strong>Computer Teacher Training (CTT)</strong>2-year diploma</p>
-    <p><strong>Languages</strong>English (fluent), Hindi (native)</p>
-  </div>
-</section>
 
-<section class="contact" id="contact">
-  <h2>Let's talk about your team.</h2>
-  <div class="lines">
-    <a href="mailto:rachanasingh.dev@gmail.com">rachanasingh.dev@gmail.com</a>
-    <a href="tel:+918368066493">+91 83680 66493</a>
-    <a href="https://github.com/rachanasinghdelhi">github.com/rachanasinghdelhi</a>
-  </div>
-</section>
+  <!-- AI PIPELINE DEMO -->
+  <section id="demo">
+    <div class="wrap">
+      <h2>Watch my AI pipeline work</h2>
+      <p class="sub">This is how my Laravel LMS creates content with AI. Pick something to generate and press run. If one AI provider fails, it falls back to the next one.</p>
+      <div class="demo">
+        <div class="demo-head">
+          <h3>AI course generator<small>Simulated run of the real system</small></h3>
+          <div class="pick" role="group" aria-label="What to generate">
+            <button type="button" aria-pressed="true" data-what="a course">Course</button>
+            <button type="button" aria-pressed="false" data-what="a quiz">Quiz</button>
+            <button type="button" aria-pressed="false" data-what="a narrated video">Video</button>
+          </div>
+        </div>
+        <ol class="steps" id="steps">
+          <li><span class="ic">🧾</span><span>Build the prompt<span class="d">Topic, level and a strict JSON schema</span></span><span class="st">waiting</span></li>
+          <li><span class="ic">📥</span><span>Queue the job<span class="d">Laravel queue, so the site stays fast</span></span><span class="st">waiting</span></li>
+          <li><span class="ic">🧠</span><span>Ask DeepSeek<span class="d">Primary AI provider</span></span><span class="st">waiting</span></li>
+          <li><span class="ic">✨</span><span>Fall back to Gemini<span class="d">Automatic retry with the next provider</span></span><span class="st">waiting</span></li>
+          <li><span class="ic">🧪</span><span>Validate the JSON<span class="d">Reject anything that breaks the schema</span></span><span class="st">waiting</span></li>
+          <li><span class="ic">🙋‍♀️</span><span>Human approval<span class="d">Nothing goes live without a person checking it</span></span><span class="st">waiting</span></li>
+        </ol>
+        <div class="demo-foot">
+          <button class="btn pink" id="run" type="button">Run the pipeline</button>
+          <button class="btn ghost" id="approve" type="button">Approve and publish</button>
+          <span class="out" id="out" role="status"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="wrap">
+      <h2>Things I've built</h2>
+      <p class="sub">Real projects, running in production.</p>
+      <div class="grid">
+        <article class="tile" id="tutor">
+          <span class="emoji" aria-hidden="true">🗣️</span>
+          <h3>Voice AI language tutor</h3>
+          <p>Students talk to an AI tutor that answers out loud using Google text-to-speech.</p>
+          <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <button class="mini" id="speak" type="button">Hear a sample</button>
+        </article>
+
+        <article class="tile">
+          <span class="emoji" aria-hidden="true">🎓</span>
+          <h3>AI-powered LMS</h3>
+          <p>Generates courses, lessons, quizzes and exams with DeepSeek, Gemini and local Ollama models.</p>
+          <ul class="chips"><li>Laravel</li><li>Queues</li><li>JSON schema</li><li>Ollama</li></ul>
+        </article>
+
+        <article class="tile">
+          <span class="emoji" aria-hidden="true">🎬</span>
+          <h3>Narrated lesson videos</h3>
+          <p>Lessons turn into videos with AI voice-over, produced automatically.</p>
+          <ul class="chips"><li>TTS</li><li>Queues</li><li>Automation</li></ul>
+        </article>
+
+        <article class="tile">
+          <span class="emoji" aria-hidden="true">✍️</span>
+          <h3>Self-writing SEO blog</h3>
+          <p>An AI pipeline drafts SEO posts on its own and waits for a human to approve them.</p>
+          <ul class="chips"><li>LLM APIs</li><li>SEO</li><li>Approval flow</li></ul>
+        </article>
+
+        <article class="tile">
+          <span class="emoji" aria-hidden="true">🌐</span>
+          <h3>50+ client websites</h3>
+          <div class="browsers" aria-hidden="true"><div>retail</div><div>health</div><div>education</div><div>hotels</div></div>
+          <p>From first brief to launch, in PHP, Laravel, WordPress and React.</p>
+        </article>
+
+        <article class="tile">
+          <span class="emoji" aria-hidden="true">🛒</span>
+          <h3>E-commerce stores</h3>
+          <p>Faster, easier-to-use online shops that help clients sell more.</p>
+          <ul class="chips"><li>PHP</li><li>WordPress</li><li>UX</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK PLAYGROUND -->
+  <section>
+    <div class="wrap">
+      <h2 style="text-align:center">Tap my toolbox</h2>
+      <div class="play" id="play">
+        <button type="button" data-f="My main backend framework. Queues, APIs and clean MVC.">Laravel</button>
+        <button type="button" data-f="15+ years of it, from small sites to full apps.">PHP</button>
+        <button type="button" data-f="Primary AI provider in my content pipeline.">DeepSeek</button>
+        <button type="button" data-f="Fallback provider when the first one fails.">Gemini</button>
+        <button type="button" data-f="Local AI models, no API bills.">Ollama</button>
+        <button type="button" data-f="For interactive frontends.">React</button>
+        <button type="button" data-f="Database design for everything above.">MySQL</button>
+        <button type="button" data-f="Automation scripts that save hours of manual work.">Python</button>
+        <button type="button" data-f="My AI coding agents for planning, building and shipping.">Claude Code + Codex</button>
+        <button type="button" data-f="Still the fastest way to launch a business site.">WordPress</button>
+      </div>
+      <p class="fact" id="fact" role="status">Tap a tool to see how I use it.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <h2>Let's build something.</h2>
+      <p class="sub" style="margin:1rem auto 0">Open to remote roles. Based in New Delhi.</p>
+      <div class="cta">
+        <a class="btn pink" href="mailto:rachanasingh.dev@gmail.com?subject=Developer%20role">rachanasingh.dev@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/rachanasinghdelhi">GitHub</a>
+        <a class="btn ghost" href="resume-developer.pdf" download>Resume</a>
+      </div>
+    </div>
+  </section>
 </main>
-
-<footer>© <span id="yr">2026</span> Rachana Kumari Singh. New Delhi, India.</footer>
-</div>
+<footer>© <span id="yr">2026</span> Rachana Singh</footer>
 
 <script>
 (function(){
-  var buttons = document.querySelectorAll('.switch button');
-  function setTrack(t, push){
-    if(t !== 'developer' && t !== 'marketing') t = 'developer';
-    document.body.dataset.track = t;
-    buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.track === t ? 'true' : 'false'); });
-    if(push){ try{ history.replaceState(null, '', '#' + t); }catch(e){} }
-  }
-  buttons.forEach(function(b){ b.addEventListener('click', function(){ setTrack(b.dataset.track, true); }); });
-  var h = location.hash.replace('#','');
-  setTrack(h === 'marketing' ? 'marketing' : 'developer', false);
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* terminal typing */
+  var lines = [
+    ['p','$ whoami'], ['o','rachana: laravel developer + ai integrations'],
+    ['p','$ php artisan stats'], ['o','15+ years | 50+ websites shipped'],
+    ['p','$ cat ai-stack.txt'], ['k','deepseek gemini ollama tts queues'],
+    ['p','$ status'], ['o','open to remote work ✔']
+  ];
+  var term = document.getElementById('term');
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  if(reduce){
+    term.innerHTML = lines.map(function(l){return '<span class="'+l[0]+'">'+esc(l[1])+'</span>'}).join('\n');
+  } else {
+    var li=0, ci=0, html='';
+    (function type(){
+      if(li>=lines.length){ term.innerHTML = html + '<span class="caret"></span>'; return; }
+      var l = lines[li];
+      ci++;
+      term.innerHTML = html + '<span class="'+l[0]+'">'+esc(l[1].slice(0,ci))+'</span><span class="caret"></span>';
+      if(ci>=l[1].length){ html += '<span class="'+l[0]+'">'+esc(l[1])+'</span>\n'; li++; ci=0; setTimeout(type, l[0]==='p'?250:450); }
+      else setTimeout(type, l[0]==='p'?55:18);
+    })();
+  }
+
+  /* pipeline demo */
+  var what='a course', busy=false;
+  var picks=document.querySelectorAll('.pick button');
+  picks.forEach(function(b){b.addEventListener('click',function(){
+    if(busy) return;
+    picks.forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); what=b.dataset.what; reset();
+  })});
+  var items=[].slice.call(document.querySelectorAll('#steps li'));
+  var out=document.getElementById('out'), run=document.getElementById('run'), approve=document.getElementById('approve');
+  function set(i,cls,txt){ items[i].className=cls; items[i].querySelector('.st').textContent=txt; }
+  function reset(){ items.forEach(function(_,i){set(i,'','waiting')}); out.textContent=''; approve.style.display='none'; run.style.display=''; }
+  var plan=[[0,'run','building'],[0,'ok','done'],[1,'run','queued'],[1,'ok','done'],[2,'run','calling'],[2,'fail','timeout'],
+            [3,'run','retrying'],[3,'ok','responded'],[4,'run','checking'],[4,'ok','valid'],[5,'run','your turn']];
+  run.addEventListener('click',function(){
+    if(busy) return; busy=true; reset(); run.style.display='none'; out.textContent='Generating '+what+'...';
+    var k=0, gap = reduce?60:650;
+    (function step(){
+      if(k>=plan.length){ busy=false; approve.style.display='inline-flex'; out.textContent='Draft ready. Waiting for approval.'; approve.focus(); return; }
+      var s=plan[k++]; set(s[0],s[1],s[2]); setTimeout(step, s[1]==='fail'?gap*1.4:gap);
+    })();
+  });
+  approve.addEventListener('click',function(){
+    set(5,'ok','approved'); approve.style.display='none'; run.style.display=''; run.textContent='Run it again';
+    out.textContent='Published '+what+'. 🎉';
+  });
+
+  /* voice tutor sample using the browser's voice */
+  var tutor=document.getElementById('tutor'), speak=document.getElementById('speak');
+  speak.addEventListener('click',function(){
+    if(!('speechSynthesis' in window)){ speak.textContent='Voice not supported in this browser'; return; }
+    speechSynthesis.cancel();
+    var u=new SpeechSynthesisUtterance("Hello! I'm your English tutor. Let's practise: how was your day today?");
+    u.lang='en-IN'; u.rate=1;
+    u.onstart=function(){tutor.classList.add('talking'); speak.textContent='Speaking...'};
+    u.onend=u.onerror=function(){tutor.classList.remove('talking'); speak.textContent='Hear it again'};
+    speechSynthesis.speak(u);
+  });
+
+  /* toolbox */
+  var fact=document.getElementById('fact');
+  document.querySelectorAll('#play button').forEach(function(b){
+    b.addEventListener('click',function(){
+      b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
+      fact.textContent=b.textContent+': '+b.dataset.f;
+    });
+  });
 })();
 </script>
 </body>
